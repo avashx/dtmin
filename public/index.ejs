@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Delhi Bus Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+    <section class="back">
+        <div class="sectop">
+            <br>
+            <h3 style="margin-top: 1px; margin-bottom: 12px;"> 
+                <span class="intro">DTC TC </span><br>Government of NCT of Delhi
+            </h3>
+            <center><div class="map-container"><div id="map"></div></center>
+        </div>
+    </section>
+
+    <section class="box">
+        <div class="data">
+            <h3>Nearest Stop: Loading...</h3>
+            <h3>Nearest Buses: Loading...</h3>
+        </div>
+        <div>
+            <a href="#rec" onclick="rec();"><input type="button" value="Attendance" class="btn1"></a>
+            <input type="button" value="Fullscreen Map" class="btn1" onclick="toggleFullscreen()">
+            <input type="button" value="BUS" class="btn1">
+        </div>
+        <br>
+        <form class="frm">
+            <input type="text" class="form" placeholder="eg.">
+            <select name="" id="" class="form">
+                <option value="">Category</option>
+                <option value="">TWO Time</option>
+                <option value="">ONE Time</option>
+            </select>
+            <select name="" id="" class="form">
+                <option value="">Location</option>
+                <option value="">Delhi</option>
+                <option value="">Noida</option>
+                <option value="">Chennai</option>
+                <option value="">Gurugram</option>
+                <option value="">Chandigarh</option>
+                <option value="">Mumbai</option>
+                <option value="">Bangalore</option>
+            </select>
+            <a href="#"><input type="submit" value="Search" class="btn"></a>
+        </form>
+        <h5><i>( or search for other services )</i></h5>
+        <input onclick="window.location.href='#pop'" type="submit" value="Submit" class="btn2">
+    </section>
+
+    <br>
+
+    <section>
+        <center>
+            <div class="card">
+                <p class="orange">0</p>
+                <br>
+            </div>
+            <div class="card">
+                <p class="green">1</p>
+                <br>
+            </div>
+            <div class="card">
+                <p class="red">2</p>
+                <br>
+            </div>
+            <div class="card">
+                <p class="orange">3</p>
+                <br>
+            </div>
+        </center>
+    </section>
+
+    <section id="pplr" class="sec2">
+        <h1><b>Report Issues</b></h1>
+        <br>
+        <input class="search" type="text" placeholder='Search service'>
+        <br><br>
+        <div>
+            <input type="button" class="pplr" href="" value="BUS issue">
+            <input type="button" class="pplr" href="" value="Report Breakdown">
+            <input type="button" class="pplr" href="" value="Report Fraud">
+            <input type="button" class="pplr" href="" value="Emergency">
+        </div>
+    </section>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Socket.IO client library -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+</body>
+</html>
